@@ -7,4 +7,8 @@ node default {
     ensure => file,
     content => 'Pass Ex',
     }
+    file {'/tmp/tuan1':
+    ensure => file,
+    content => 'This is a tmp',
+    }
 }
