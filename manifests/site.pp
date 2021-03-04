@@ -3,7 +3,7 @@ node default {
     ensure => file,
     content => 'This a me',
     }
-    file {'/root/Tuan':
+    file {'/tmp/Tuan':
     ensure => file,
     content => 'Pass Ex',
 }
