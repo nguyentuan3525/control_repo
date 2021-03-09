@@ -1,12 +1,12 @@
 class profile::ssh_server {
-  package   {'openssh-server':
+  package   { 'openssh-server':
             ensure => present, 
             }
-  service {'sshd':
-            ensure => running,
-            enalbe => true,
+  service   { 'sshd':
+            ensure => 'running',
+            enalbe => 'true',
             }
-  ssh_authorized_key {'root@master.puppet.vm':
+  ssh_authorized_key { 'root@master.puppet.vm':
             ensure => present,
             user   => 'root',
             type   => 'ssh-rsa',
