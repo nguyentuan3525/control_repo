@@ -6,4 +6,5 @@ class profile::httpd {
     ensure => running,
     enalbe => true,
     }
+    include profile::index
 }
