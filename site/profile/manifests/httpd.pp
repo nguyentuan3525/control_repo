@@ -2,9 +2,9 @@ class profile::httpd {
     package { 'httpd':
     ensure => present
     }
-    service { 'httpd':
+    service { 'httpd.service':
     ensure => running,
-    enalbe => true,
+    enable => true,
     }
     include profile::index
 }
