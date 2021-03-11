@@ -1,5 +1,5 @@
 class profile::index {
-      file {"/var/www/html/index.html":
+      file {"/var/www/index.html":
       ensure  => 'file',
       content => 'Welcome to Apache',
     }  
