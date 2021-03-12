@@ -2,7 +2,6 @@ class profile::agent_nodes {
   include dockeragent
   dockeragent::node {'web.puppet.vm':}
   dockeragent::node {'db.puppet.vm':
-        ports => '8081:8080',
         }
         host {'web.puppet.vm':
         ensure => present,
