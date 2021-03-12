@@ -1,7 +1,9 @@
 class profile::agent_nodes {
   include dockeragent
   dockeragent::node {'web.puppet.vm':}
-  dockeragent::node {'db.puppet.vm':}
+  dockeragent::node {'db.puppet.vm':
+        publish => '8081:8080',
+        }
   host {'web.puppet.vm':
         ensure => present,
         ip     => '172.18.0.2',
@@ -9,6 +11,5 @@ class profile::agent_nodes {
    host {'db.puppet.vm':
         ensure => present,
         ip     => '172.18.0.3',
-        publish => '8081:8080',
   }
 }
