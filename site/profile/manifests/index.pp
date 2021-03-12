@@ -1,6 +1,6 @@
 class profile::index {
-      file {"/var/www/index.html":
+      file {"/var/www/html/index.html":
       ensure  => 'file',
-      content => 'Welcome to Apache',
+      content => 'Welcome to Mixx',
     }  
 }
